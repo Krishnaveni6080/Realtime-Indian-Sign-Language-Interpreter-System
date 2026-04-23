@@ -118,8 +118,7 @@ The model was evaluated on a held-out test set. Key metrics:
 
 - **Overall Accuracy**: ~95%+
 - Common alphabets (A–Z) and digits (0–9): **>97% F1-score**
-- Full per-class results: see [`performance_output.txt`](performance_output.txt)
-- Confusion matrix: see [`confusion_matrix.png`](confusion_matrix.png)
+
 
 ---
 
