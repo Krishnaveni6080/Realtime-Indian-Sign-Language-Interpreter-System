@@ -1,0 +1,53 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+.env
+.venv
+env/
+venv/
+
+# ==========================
+# Large Dataset Files (too big for GitHub)
+# ==========================
+landmarks_dataset11.csv
+*.csv
+
+# ==========================
+# Training Images Dataset
+# ==========================
+images/
+
+# ==========================
+# Jupyter Notebooks Checkpoints
+# ==========================
+.ipynb_checkpoints/
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================
+# IDE / Editor
+# ==========================
+.vscode/
+.idea/
+*.suo
+*.user
+
+# ==========================
+# Logs
+# ==========================
+*.log

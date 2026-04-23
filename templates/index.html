@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISL Real-Time Translation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Load FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <div class="app-container">
+        <header>
+            <div class="logo-container">
+                <div class="icon-pulse" id="header-pulse"></div>
+                <h1>ISL Translation Engine</h1>
+            </div>
+            
+            <div class="header-controls">
+                <button id="camera-toggle-btn" class="glow-btn start-mode">
+                    <i class="fa-solid fa-camera"></i> <span id="toggle-btn-text">Start Camera</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <section class="video-section">
+                <div class="video-wrapper glass-panel" id="video-wrapper">
+                    <img src="" alt="Video Stream" id="video-stream" style="display: none;">
+                    
+                    <div class="camera-offline" id="camera-offline">
+                        <div class="offline-icon"><i class="fa-solid fa-video-slash"></i></div>
+                        <h3>Camera is Offline</h3>
+                        <p>Click "Start Camera" to begin real-time translation.</p>
+                    </div>
+                    
+                    <div class="video-overlay" id="recording-overlay" style="display: none;">
+                        <span class="dot"></span> Live translation
+                    </div>
+                </div>
+            </section>
+
+            <section class="stats-section glass-panel">
+                <h2>Translation Dashboard</h2>
+                
+                <div class="stat-card primary">
+                    <span class="stat-label">Current Sign</span>
+                    <div class="stat-value" id="current-sign">---</div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-label">Confidence Level</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="confidence-bar">
+                            <div class="progress-fill" id="confidence-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="confidence-text">0.0%</span>
+                    </div>
+                </div>
+
+                <div class="stat-card history-card">
+                    <span class="stat-label">Sentence History</span>
+                    <div class="history-content" id="sentence-history">
+                        Start your camera to begin detecting history...
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
